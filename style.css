@@ -1,0 +1,105 @@
+html{
+  height: 100% auto;
+  /*background-image: url(bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  */
+  background: black url(bg.gif) center no-repeat;
+  background-size: cover;
+
+}
+
+body{
+  /*background: black;*/
+  font-size: 13px;
+  font-family: "Courier New",Courier,Monaco,serif;
+  color: white;
+  padding-top:700px;
+  position: relative;
+}
+* {
+  box-sizing: border-box;
+  /*border: 1px solid*/
+}
+ul li{
+  list-style: none; /*убрать разметку(точки)*/
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.footer {
+  display: inline-block;
+  max-width: 100%;
+}
+.container{
+  /*max-width: 300px;*/
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  /*margin: 0 auto;*/
+  animation-duration: 2s;
+  animation-name: fadein;
+
+
+}
+
+/*прозрачность от непрозрачного до прозрачного*/
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*изменение фона при разрешении экрана от 700 до 1000px*/
+
+@media all and (min-width: 700px) and (max-width: 1000px) {
+  body{
+    background: red;
+  }
+}
+.logo{
+  margin-bottom: 10px;
+}
+.header{
+  margin-bottom: 100px;
+}
+
+.body{
+  margin-bottom: 50px;
+}
+.navigation li{
+  margin-bottom: 15px;
+}
+.navigation a:hover {
+  background: red;
+}
+.navigation a {
+  transition: all .5s; /*change color to 3 seconds */
+  /*transition-property: backgroun-color;
+  transition-duration: 3s;*/
+}
+.social-links li{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.social-links img{
+  max-width: 100%;
+}
+ul{
+    padding-left: 0;
+}
+.social-links a{
+  opacity: 0.2;
+}
+.social-links a:hover{
+  opacity: 0.9;
+}
